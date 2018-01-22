@@ -1,0 +1,39 @@
+
+public enum SwiftCodeCreateClassArguments: String {
+
+    public init?(rawValue: String) {
+
+        let parts = rawValue.components(separatedBy: rawValue)
+
+        // argument 0 = the calling file
+        // argument 1 = the command 
+        
+
+        switch parts.count {
+            case 0: 
+                self = .invalidNumberArguments
+            case 1:
+                
+                switch parts[1] {
+                    
+                    default:
+                        self = .unknownCommand
+                }
+            
+            default: 
+
+                switch parts[1] {
+
+                    default:
+                        self = .unknownCommand
+                }
+
+        }
+
+    }
+
+    case invalidNumberArguments
+
+    case unknownCommand
+
+}

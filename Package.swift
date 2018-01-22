@@ -21,6 +21,23 @@ let package = Package(
         .target(
             name: "SwiftCode",
             dependencies: []),
+        .target(
+            name: "SwiftCodeApplicationArguments",
+            dependencies: [
+                 .target(name: "SwiftCodeFileCreate")
+            ]),
+        .target(
+            name: "SwiftCodeApplication",
+            dependencies: [
+                .target(name: "SwiftCode"),
+                .target(name: "SwiftCodeApplicationArguments")
+            ]),
+         .target(
+            name: "SwiftCodeFileCreate",
+            dependencies: [],
+            path: "Sources/Library/SwiftCodeFileCreate"
+
+        ),
         .testTarget(
             name: "SwiftCodeTests",
             dependencies: ["SwiftCode"]),
