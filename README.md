@@ -17,7 +17,9 @@ Either:
 
     swift-code create FILETYPE NAME [FOLDER]
 
-    swift-code create class NAME
+    swift-code create view-controller NAME
+
+    swift-code create class NAME --uikit --
 
     swift-code create struct NAME
 

@@ -14,15 +14,15 @@ public enum SwiftCodeCreateClassArguments: String {
                 self = .invalidNumberArguments
             case 1:
                 
-                switch parts[1] {
+                switch parts[0] {
                     
                     default:
-                        self = .unknownCommand
+                        self = .filename
                 }
             
             default: 
 
-                switch parts[1] {
+                switch parts[0] {
 
                     default:
                         self = .unknownCommand
@@ -35,5 +35,7 @@ public enum SwiftCodeCreateClassArguments: String {
     case invalidNumberArguments
 
     case unknownCommand
+
+    case filename
 
 }

@@ -22,7 +22,8 @@ public enum SwiftCodeCreateFileArguments: String {
                         SwiftCodeCreateFileArguments.dashH.rawValue:
 
                         self = .help
-
+                    case SwiftCodeCreateFileArguments.createViewController.rawValue:
+                        self = .createViewController
                     case SwiftCodeCreateFileArguments.createProtocol.rawValue:
                         self = .createProtocol
                     case SwiftCodeCreateFileArguments.createClass.rawValue:
@@ -48,6 +49,8 @@ public enum SwiftCodeCreateFileArguments: String {
 
     }
 
+    case createViewController = "view-controller"
+
     case createProtocol = "protocol"
 
     case createClass = "class"
@@ -71,6 +74,7 @@ public enum SwiftCodeCreateFileArguments: String {
     public var fileType: SwiftCodeFileType {
 
         switch self {
+            case .createViewController: return .viewControllerFile
             case .createProtocol: return .protocolFile
             case .createClass: return .classFile
             case .createStruct: return .structFile

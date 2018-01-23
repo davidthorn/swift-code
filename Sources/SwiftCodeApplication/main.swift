@@ -5,8 +5,6 @@ import SwiftCodeFileCreate
 
 let first = CommandLine.arguments.removeFirst()
 
-print("first command was \(first)")
-
 let arguments = SwiftCodeApplicationArguments(rawValue: CommandLine.arguments.joined(separator: " ") )!
 
 switch arguments {
@@ -38,3 +36,4 @@ switch arguments {
     
     default: break
 }
+

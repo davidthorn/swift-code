@@ -14,6 +14,8 @@ public class SwiftCodeCreateFile {
     public func execute() {
 
         switch self.type {
+            case .viewControllerFile:
+                print("should create a view controller with name: \(self.name)")
             case .protocolFile:
                 print("should create a protocol with name: \(self.name)")
             case .classFile:

@@ -1,5 +1,7 @@
 public enum SwiftCodeFileType: String {
 
+    case viewControllerFile
+
     case protocolFile
 
     case structFile
