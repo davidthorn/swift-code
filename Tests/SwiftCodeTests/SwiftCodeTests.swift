@@ -1,16 +1,16 @@
 import XCTest
 import Foundation
-@testable import SwiftCodeFileCreate
+@testable import SwiftCodeCreate
 
 @testable import SwiftCode
 
 class SwiftCodeTests: XCTestCase {
 
 
-    var fileCreator: SwiftCodeCreateFile!
+    var fileCreator: SwiftFile!
 
     func setup() {
-        self.fileCreator = SwiftCodeCreateFile(name: "SwiftCode" , type: .viewControllerFile, extends: "UIViewController" , implements: [
+        self.fileCreator = SwiftFile(name: "SwiftCode" , type: .viewControllerFile, extends: "UIViewController" , implements: [
             "UITableViewDelegate",
             "UITableViewDataSource"
         ])

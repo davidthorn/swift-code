@@ -1,5 +1,5 @@
 import SwiftCodeApplicationArguments
-import SwiftCodeFileCreate
+import SwiftCodeCreate
 import Foundation
 
 //let argumentsString = " ".join(CommandLine.arguments)
@@ -27,7 +27,7 @@ switch arguments {
             case .unknownCommand, .invalidNumberArguments:
                 print("unknown command or invalid number of arguments")
             default:
-                let command = SwiftCodeCreateFile(name: createArguments[1] , type: createCommand.fileType )
+                let command = SwiftFile(name: createArguments[1] , type: createCommand.fileType )
                 command.execute()
         }
 

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "swift-code-create",
+        "repositoryURL": "https://github.com/davidthorn/swift-code-create.git",
+        "state": {
+          "branch": null,
+          "revision": "ff3af2f1fa2d0b7b7fd475eb081e228a2b890d42",
+          "version": "0.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
