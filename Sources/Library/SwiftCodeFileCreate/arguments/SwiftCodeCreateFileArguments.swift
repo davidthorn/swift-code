@@ -23,6 +23,30 @@ public enum SwiftCodeCreateFileArguments: String {
 
                         self = .help
                     case SwiftCodeCreateFileArguments.createViewController.rawValue:
+                        self = .invalidNumberArguments
+                    case SwiftCodeCreateFileArguments.createProtocol.rawValue:
+                        self = .invalidNumberArguments
+                    case SwiftCodeCreateFileArguments.createClass.rawValue:
+                        self = .invalidNumberArguments
+                    case SwiftCodeCreateFileArguments.createStruct.rawValue:
+                        self = .invalidNumberArguments
+                    case SwiftCodeCreateFileArguments.createEnum.rawValue:
+                        self = .invalidNumberArguments
+
+                    default:
+                        self = .unknownCommand
+                }
+            default: 
+               
+                 switch parts[0]{
+                    
+                    case SwiftCodeCreateFileArguments.help.rawValue,
+                        SwiftCodeCreateFileArguments.dashDashHelp.rawValue,
+                        SwiftCodeCreateFileArguments.dashHelp.rawValue,
+                        SwiftCodeCreateFileArguments.dashH.rawValue:
+
+                        self = .help
+                    case SwiftCodeCreateFileArguments.createViewController.rawValue:
                         self = .createViewController
                     case SwiftCodeCreateFileArguments.createProtocol.rawValue:
                         self = .createProtocol
@@ -36,13 +60,6 @@ public enum SwiftCodeCreateFileArguments: String {
                     default:
                         self = .unknownCommand
                 }
-            default: 
-               
-                 switch parts[0] {
-
-                    default:
-                        self = .unknownCommand
-                 }
                 
 
         }

@@ -2,7 +2,7 @@ run: link
 	swift-code create class
 
 compile:
-	swift build --configuration=release --static-swift-stdlib
+	swift build --configuration=release
 	
 link: compile
 	sudo rm -rf /usr/local/bin/swift-code

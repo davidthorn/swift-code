@@ -40,6 +40,6 @@ let package = Package(
         ),
         .testTarget(
             name: "SwiftCodeTests",
-            dependencies: ["SwiftCode"]),
+            dependencies: ["SwiftCode" , "SwiftCodeFileCreate"]),
     ]
 )

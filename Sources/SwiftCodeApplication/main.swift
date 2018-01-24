@@ -1,5 +1,6 @@
 import SwiftCodeApplicationArguments
 import SwiftCodeFileCreate
+import Foundation
 
 //let argumentsString = " ".join(CommandLine.arguments)
 
@@ -17,10 +18,20 @@ switch arguments {
         var createArguments = CommandLine.arguments
         _ = createArguments.removeFirst()
 
-        let createCommand = SwiftCodeCreateFileArguments(rawValue: createArguments.joined(separator: " "))!
+        guard let createCommand = SwiftCodeCreateFileArguments(rawValue: createArguments.joined(separator: " ")) else {
+            print("invalid argument")
+            exit(12)
+        }
 
-        let command = SwiftCodeCreateFile(name: "my file name" , type: createCommand.fileType )
-        command.execute()
+        switch createCommand {
+            case .unknownCommand, .invalidNumberArguments:
+                print("unknown command or invalid number of arguments")
+            default:
+                let command = SwiftCodeCreateFile(name: createArguments[1] , type: createCommand.fileType )
+                command.execute()
+        }
+
+        
 
     case .invalidNumberArguments:
 
